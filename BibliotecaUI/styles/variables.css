@@ -1,0 +1,38 @@
+/* variables.css - full */
+:root{
+  --color-bg:#f6f7fb;
+  --color-surface:#fff;
+  --color-primary:#0b74de;
+  --color-primary-600:#075ea8;
+  --color-secondary:#6c757d;
+  --color-success:#2d9a4a;
+  --color-warning:#f08a24;
+  --color-danger:#e04b4b;
+  --color-muted:#6b7280;
+  --color-text:#0f1724;
+
+  --space-xs:.25rem;
+  --space-sm:.5rem;
+  --space-md:1rem;
+  --space-lg:1.5rem;
+  --space-xl:2rem;
+
+  --font-base:Inter,system-ui;
+  --font-size-base:16px;
+  --radius-sm:6px;
+  --radius-md:12px;
+  --shadow-sm:0 1px 3px rgba(12,18,26,.06);
+  --shadow-md:0 8px 24px rgba(12,18,26,.08);
+  --transition-fast:180ms cubic-bezier(.4,0,.2,1);
+}
+
+*{box-sizing:border-box}
+body{margin:0;font-family:var(--font-base);background:var(--color-bg);color:var(--color-text)}
+.container{max-width:1100px;margin:auto;padding:var(--space-lg)}
+.row{display:flex;gap:var(--space-md);flex-wrap:wrap}
+.grid{display:grid;gap:var(--space-md)}
+.grid--3{grid-template-columns:repeat(3,1fr)}
+@media(max-width:900px){.grid--3{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.grid--3{grid-template-columns:1fr}}
+.u-bg-surface{background:var(--color-surface)}
+.u-font-sans{font-family:var(--font-base)}

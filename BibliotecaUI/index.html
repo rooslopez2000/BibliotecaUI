@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Biblioteca UI - Unidad 3 DSI (Demo)</title>
+  <link rel="stylesheet" href="styles/variables.css">
+  <link rel="stylesheet" href="styles/components.css">
+  <link rel="stylesheet" href="styles/utilities.css">
+</head>
+<body class="u-font-sans u-bg-surface">
+  <header class="navbar">
+    <div class="navbar__inner container">
+      <a class="brand" href="#">UTM - UI Lib</a>
+      <nav class="nav" id="nav">
+        <a class="nav__link" href="#buttons">Botones</a>
+        <a class="nav__link" href="#cards">Tarjetas</a>
+        <a class="nav__link" href="#forms">Formularios</a>
+        <a class="nav__link" href="#components">Otros</a>
+      </nav>
+      <button id="nav-toggle" class="btn btn--ghost navbar__toggle">☰</button>
+    </div>
+  </header>
+
+  <main class="container demo">
+    <section id="buttons" class="demo__section">
+      <h2>Botones</h2>
+      <div class="row">
+        <button class="btn btn--primary">Primario</button>
+        <button class="btn btn--secondary">Secundario</button>
+        <button class="btn btn--ghost">Ghost</button>
+        <button class="btn btn--primary" disabled>Disabled</button>
+        <button class="btn btn--icon">🔍</button>
+      </div>
+    </section>
+
+    <section id="cards" class="demo__section">
+      <h2>Tarjetas de contenido</h2>
+      <div class="grid grid--3">
+        <article class="card">
+          <img class="card__img" src="https://picsum.photos/seed/a/600/400">
+          <div class="card__body">
+            <h3 class="card__title">Tarjeta 1</h3>
+            <p class="card__text">Descripción breve.</p>
+          </div>
+          <div class="card__footer">
+            <span class="badge">Nuevo</span>
+            <button class="btn btn--small btn--primary">Leer</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="forms" class="demo__section">
+      <h2>Formulario</h2>
+      <form class="form">
+        <div class="form__row">
+          <label class="form__label">Nombre</label>
+          <input class="input" type="text" required />
+        </div>
+      </form>
+    </section>
+
+    <section id="components" class="demo__section">
+      <h2>Otros componentes</h2>
+      <button class="btn btn--primary" data-modal-open="demo-modal">Abrir Modal</button>
+      <p>Pasa sobre <span class="has-tooltip" data-tooltip="Tooltip demo">esto</span>.</p>
+      <div class="alert alert--success">Éxito</div>
+
+      <div class="accordion" data-accordion>
+        <div class="accordion__item">
+          <button class="accordion__btn">Sección 1</button>
+          <div class="accordion__panel">Contenido 1</div>
+        </div>
+      </div>
+
+      <div class="tabs" data-tabs>
+        <div class="tabs__nav">
+          <button class="tabs__tab is-active" data-tab="t1">Tab1</button>
+        </div>
+        <div class="tabs__panels">
+          <div class="tabs__panel is-active" data-panel="t1">Panel 1</div>
+        </div>
+      </div>
+
+      <button id="toast-trigger" class="btn btn--secondary">Mostrar Toast</button>
+    </section>
+  </main>
+
+  <div class="modal" id="demo-modal" aria-hidden="true">
+    <div class="modal__content">
+      <button class="modal__close" data-modal-close>✕</button>
+      <h3>Modal</h3>
+      <p>Contenido del modal.</p>
+    </div>
+  </div>
+
+  <div id="toasts" class="toasts"></div>
+
+<script src="scripts/main.js"></script>
+</body>
+</html>
